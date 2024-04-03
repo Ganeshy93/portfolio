@@ -1,16 +1,14 @@
-// Sample data object
-
-
 import { Application } from '@splinetool/runtime';
 
-  const canvas = document.createElement('canvas');
-  canvas.id = 'canvas3d';
-  canvas.width = 400;
-  canvas.height = 300;
-  document.querySelector('.section__pic-container').appendChild(canvas);
+const canvas = document.createElement('canvas');
+canvas.id = 'canvas3d';
+canvas.width = 400;
+canvas.height = 300;
+document.querySelector('.section__pic-container').appendChild(canvas);
 
-  const app = new Application(canvas);
-  app.load('https://prod.spline.design/Wv-YNhgeAyBh1u07/scene.splinecode');
+const app = new Application(canvas);
+app.load('https://prod.spline.design/Wv-YNhgeAyBh1u07/scene.splinecode');
+
 const projectsData = [
   {
     title: "Project One",
@@ -43,6 +41,8 @@ function openDemo(url) {
 
 // Function to populate contact information
 function populateContactInfo() {
+  const yourEmail = "your@email.com"; // Replace with your actual email
+  const yourLinkedInUrl = "https://www.linkedin.com/in/your-profile"; // Replace with your LinkedIn URL
   document.getElementById("emailInfo").querySelector("a").href = "mailto:" + yourEmail;
   document.getElementById("linkedinInfo").querySelector("a").href = yourLinkedInUrl;
 }
@@ -55,8 +55,7 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-// Call functions to populate data
-
+// Function to show projects by category
 function showCategory(category) {
   // Hide all project categories
   document.querySelectorAll('.project-category').forEach(function(category) {
@@ -66,5 +65,7 @@ function showCategory(category) {
   // Show the selected category
   document.getElementById(category).style.display = 'block';
 }
+
+// Call functions to populate data
 populateProjects();
 populateContactInfo();
