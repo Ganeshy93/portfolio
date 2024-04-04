@@ -380,6 +380,19 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Optional: Add styles to adjust spacing if needed */
+#projects {
+  margin-top: 50px; /* Adjust as needed */
+}
+
 /* CONTACT */
 
 #contact {
